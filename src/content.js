@@ -34,14 +34,16 @@ export const featured = {
     { value: "EC2", label: "Docker, non-root" },
   ],
   body: [
-    "Evaluates prior-authorization requests against real CMS National Coverage Determinations — 100.1 bariatric surgery, 240.4 CPAP, 240.4.1 sleep testing — and returns approve, deny or route-to-human with the governing passage quoted.",
+    "A retrieval-augmented system over real CMS National Coverage Determinations — 100.1 bariatric surgery, 240.4 CPAP, 240.4.1 sleep testing. Policy documents are embedded and searched for the passage closest to the incoming request. Below a 0.35 similarity floor the system refuses to answer rather than guess; above it, the request is judged against that passage and returned as approve, deny or route-to-human with the governing text quoted.",
     "The language model does judgement only: per criterion, met / not met / unknown. A deterministic rule engine makes the decision. That split is the whole point — approval requires every criterion explicitly met, so no prompt can talk the system into approving. A documented not-met outranks an unknown, because a denial is a better answer than an escalation.",
     "It over-escalates on conditional policy text — a CPAP footnote whose precondition the note never states lands as unknown. The fix is a second pass asking whether each criterion's triggering circumstance applies at all, not more prompting.",
   ],
   stack: [
     "FastAPI",
     "Pydantic v2",
+    "RAG",
     "Gemini",
+    "Embeddings",
     "NumPy",
     "pytest",
     "Docker",
@@ -155,7 +157,13 @@ export const skills = [
   { group: "Backend", items: ["FastAPI", "Pydantic v2", "REST APIs", "SQLite"] },
   {
     group: "AI / LLM",
-    items: ["Gemini API", "Embeddings & retrieval", "Prompt design", "PyTorch"],
+    items: [
+      "RAG (retrieval-augmented generation)",
+      "Vector embeddings & semantic search",
+      "Gemini API",
+      "Prompt design",
+      "PyTorch",
+    ],
   },
   { group: "Frontend", items: ["React", "Vite", "Tailwind CSS"] },
   {
