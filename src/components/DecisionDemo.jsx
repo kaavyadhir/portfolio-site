@@ -49,7 +49,6 @@ export default function DecisionDemo() {
   const warn = state.tone === "warn";
 
   const confidence = useCountUp(state.confidence);
-  const retrieval = useCountUp(state.retrieval, { decimals: 3 });
 
   return (
     <div className="overflow-hidden rounded-2xl border border-line bg-surface">
@@ -150,7 +149,7 @@ export default function DecisionDemo() {
             </div>
 
             <p className="tabular mt-2 font-mono text-[11px] text-fog">
-              {retrieval} retrieval × {state.resolved} criteria resolved
+              {state.resolved} criteria resolved
             </p>
           </div>
 

@@ -79,8 +79,7 @@ export const demo = {
     approve: {
       verdict: "APPROVE",
       tone: "ok",
-      confidence: 58,
-      retrieval: 0.577,
+      confidence: 73,
       resolved: "3/3",
       criteria: [
         { text: "BMI ≥ 35", status: "met" },
@@ -93,8 +92,7 @@ export const demo = {
     escalate: {
       verdict: "SEND TO HUMAN",
       tone: "warn",
-      confidence: 37,
-      retrieval: 0.559,
+      confidence: 49,
       resolved: "2/3",
       criteria: [
         { text: "BMI ≥ 35", status: "met" },
@@ -114,13 +112,13 @@ export const demo = {
 export const projects = [
   {
     name: "Denial Intelligence",
-    line: "289 eligible issuers. 5 findings. No language model anywhere.",
-    live: "https://kaavyadhir.github.io/denial-intelligence/", // TODO: confirm this URL
+    line: "326 insurers in, 5 findings out. No language model anywhere.",
+    live: "https://kaavyadhir.github.io/Denial-intelligence/",
     liveLabel: "Read the report",
     repo: "https://github.com/kaavyadhir/denial-intelligence",
     stats: [
-      { value: "83", label: "tests" },
-      { value: "289", label: "issuers screened" },
+      { value: "86", label: "tests" },
+      { value: "289", label: "eligible issuers of 326" },
       { value: "5", label: "findings" },
     ],
     points: [
