@@ -12,8 +12,10 @@ export const person = {
     "Final-year Computer Science student at Thapar Institute. I build backends, data pipelines and AI-assisted systems — FastAPI and SQL, tested, containerised, running on AWS. My recent projects happen to sit in healthcare, a domain that taught me a decision you cannot audit is worth very little.",
   email: "dhirkaavya@gmail.com",
   github: "https://github.com/kaavyadhir",
-  linkedin: "https://linkedin.com/in/your-handle", // TODO: your real LinkedIn URL
-  resume: "/resume.pdf", // TODO: drop your resume PDF into public/resume.pdf
+  linkedin: "https://www.linkedin.com/in/kaavya-dhir/",
+  // Named so it downloads as "Kaavya-Dhir-Resume.pdf" rather than "resume.pdf".
+  // To update: overwrite public/Kaavya-Dhir-Resume.pdf, then commit and push.
+  resume: "/Kaavya-Dhir-Resume.pdf",
   location: "Patiala, India",
 };
 
@@ -152,25 +154,45 @@ export const projects = [
    SKILLS — edit freely, keep it honest
    ------------------------------------------------------------- */
 
+/* Kept deliberately in step with the resume — if you add a skill to one,
+   add it to the other, or an interviewer will notice the gap. */
 export const skills = [
-  { group: "Languages", items: ["Python", "JavaScript", "SQL", "C++"] },
-  { group: "Backend", items: ["FastAPI", "Pydantic v2", "REST APIs", "SQLite"] },
+  { group: "Languages", items: ["Python", "C++", "C", "JavaScript", "SQL"] },
   {
-    group: "AI / LLM",
+    group: "AI & ML",
     items: [
       "RAG (retrieval-augmented generation)",
-      "Vector embeddings & semantic search",
-      "Gemini API",
-      "Prompt design",
+      "Vector embeddings",
+      "Google Gemini API",
+      "Prompt engineering",
       "PyTorch",
+      "NumPy",
     ],
   },
-  { group: "Frontend", items: ["React", "Vite", "Tailwind CSS"] },
   {
-    group: "Infrastructure",
-    items: ["Docker", "GitHub Actions", "AWS EC2", "Git"],
+    group: "Backend & APIs",
+    items: ["FastAPI", "REST APIs", "Pydantic", "Node.js", "Express.js"],
   },
-  { group: "Testing & quality", items: ["pytest", "ruff", "CI pipelines"] },
+  { group: "Frontend", items: ["React", "HTML", "CSS", "Tailwind CSS"] },
+  {
+    group: "Cloud & DevOps",
+    items: ["AWS EC2", "Docker", "GitHub Actions", "Linux", "Git", "pytest"],
+  },
+  {
+    group: "Databases & Data",
+    items: ["SQL", "SQLite", "MySQL", "MongoDB", "Pandas"],
+  },
+  {
+    group: "Core CS",
+    items: [
+      "Data structures & algorithms",
+      "OOP",
+      "DBMS",
+      "Operating systems",
+      "Computer networks",
+      "System design",
+    ],
+  },
 ];
 
 /* -------------------------------------------------------------
@@ -191,7 +213,8 @@ export const education = [
 ];
 
 export const achievements = [
-  "Runner-up, BIOS Hackathon — November 2025",
-  "LeetCode rating 1743 — top ~10%",
+  "LeetCode contest rating 1743 — top 10.17% globally",
+  "Runner-up, BIOS Hackathon, Thapar — November 2025",
+  "Dynamic Programming Camp, AlgoUniversity — matrix exponentiation, SQRT decomposition",
   "R&D member, Echoes Society, Thapar — 2023 to 2025",
 ];
