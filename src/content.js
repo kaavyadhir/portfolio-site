@@ -28,7 +28,7 @@ export const featured = {
   name: "Prior Authorization Copilot",
   kicker: "Featured — live",
   line: "An LLM reads the policy. A rule engine makes the call.",
-  live: "http://kaavya-copilot.duckdns.org", // TODO: confirm http vs https
+  live: "https://kaavya-copilot.duckdns.org/",
   repo: "https://github.com/kaavyadhir/Prior-auth-copilot",
   stats: [
     { value: "37", label: "tests" },
