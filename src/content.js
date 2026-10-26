@@ -7,9 +7,10 @@
 
 export const person = {
   name: "Kaavya Dhir",
-  tagline: "I build systems where the model reads and the code decides.",
+  kicker: "Software engineer · Backend & applied AI",
+  tagline: "I build systems that know when not to answer.",
   blurb:
-    "Final-year Computer Science student at Thapar Institute. I build backends, data pipelines and AI-assisted systems — FastAPI and SQL, tested, containerised, running on AWS. My recent projects happen to sit in healthcare, a domain that taught me a decision you cannot audit is worth very little.",
+    "Final-year Computer Science student at Thapar Institute. I build backends, data pipelines and retrieval-augmented systems — FastAPI, SQL, Docker, AWS — tested and running in CI. Most of my recent work is on decision systems: an LLM reads the policy, deterministic code makes the call, and the system escalates rather than guessing, because a decision you cannot audit is worth very little.",
   email: "dhirkaavya@gmail.com",
   github: "https://github.com/kaavyadhir",
   linkedin: "https://www.linkedin.com/in/kaavya-dhir/",

@@ -1,5 +1,6 @@
 import { person } from "../content.js";
 import Reveal from "./Reveal.jsx";
+import EmailButton from "./EmailButton.jsx";
 
 export default function Contact() {
   return (
@@ -13,13 +14,8 @@ export default function Contact() {
           be explainable after the fact. The fastest way to reach me is email.
         </p>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2">
-          <a
-            href={`mailto:${person.email}`}
-            className="rounded-lg bg-accent px-5 py-2.5 font-mono text-sm font-semibold text-ink transition-all hover:-translate-y-0.5 hover:bg-accent/90"
-          >
-            {person.email}
-          </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+          <EmailButton variant="solid" />
           <a
             href={person.linkedin}
             target="_blank"

@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { person } from "../content.js";
+import EmailButton from "./EmailButton.jsx";
 
 const rise = {
   hidden: { opacity: 0, y: 20 },
@@ -15,7 +16,6 @@ const contacts = [
   { href: person.github, label: "GitHub" },
   { href: person.linkedin, label: "LinkedIn" },
   { href: person.resume, label: "Résumé" },
-  { href: `mailto:${person.email}`, label: "Email" },
 ];
 
 export default function Hero() {
@@ -40,7 +40,7 @@ export default function Hero() {
           variants={rise}
           className="mb-6 font-mono text-xs tracking-widest text-accent uppercase"
         >
-          Software engineer
+          {person.kicker}
         </motion.p>
 
         <motion.h1
@@ -64,12 +64,12 @@ export default function Hero() {
           {person.blurb}
         </motion.p>
 
-        <motion.div variants={rise} className="mt-9 flex flex-wrap gap-2">
+        <motion.div variants={rise} className="mt-9 flex flex-wrap items-center gap-2">
           {contacts.map((c) => (
             <a
               key={c.label}
               href={c.href}
-              target={c.href.startsWith("mailto:") ? undefined : "_blank"}
+              target="_blank"
               rel="noreferrer"
               className="group rounded-lg border border-line bg-surface/60 px-4 py-2 text-sm text-chalk transition-all hover:-translate-y-0.5 hover:border-accent/50 hover:bg-raise"
             >
@@ -79,6 +79,16 @@ export default function Hero() {
               </span>
             </a>
           ))}
+
+          <EmailButton />
+
+          {/* Phones have a mail app; desktops often do not. Secondary on purpose. */}
+          <a
+            href={`mailto:${person.email}`}
+            className="px-1 text-xs text-fog underline decoration-line underline-offset-4 transition-colors hover:text-accent"
+          >
+            open in mail app
+          </a>
         </motion.div>
       </motion.div>
 
